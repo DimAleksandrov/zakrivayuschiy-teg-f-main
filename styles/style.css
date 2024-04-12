@@ -17,9 +17,8 @@
   min-inline-size: 375px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  font-variation-settings: var(--text-font-weight);
+  font-weight: var(--text-font-weight);
   color: var(--accent-color);
-
   background-color: var(--bg-color);
   background-image:
     repeating-linear-gradient(90deg, var(--gradient-color), var(--gradient-color) 2px,  transparent 2px, transparent 4px),
@@ -27,6 +26,12 @@
     linear-gradient(var(--gradient-start-color) var(--linear-gradient-start), var(--gradient-end-color));
   background-size:cover;
   background-attachment: fixed;
+}
+
+@supports (font-variation-settings: "wght" var(--text-font-weight)) {
+  .page {
+    font-variation-settings: "wght" var(--text-font-weight);
+  }
 }
 
 .header {
