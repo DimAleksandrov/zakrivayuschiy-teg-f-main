@@ -419,8 +419,11 @@
   mix-blend-mode: difference;
 }
 
-.dialog__button {
+.form__button {
   grid-column: span 2;
+}
+
+.dialog__button {
   min-width: 255px;
   min-height: 38px;
   border: 2px solid var(--accent-color);
@@ -469,7 +472,7 @@
   }
 
   .dialog {
-    max-width: 352px;
+    width: min-content;
     padding-inline: 26px;
     padding-block: 30px;
   }
